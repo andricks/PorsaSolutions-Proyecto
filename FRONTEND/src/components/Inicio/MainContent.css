@@ -1,0 +1,120 @@
+/* Estilos generales */
+.main-content {
+  min-height: 100vh; /* Ahora ocupa el 100% de la altura de la pantalla */
+  width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 150px); /* Ajuste para evitar superposición con header/footer */
+  width: 100vw;
+  background-color: #2e2b2b;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%; /* El contenido ocupa el 100% del ancho */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-buttons .btn-primary {
+  background-color: #f9a508;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #be8720;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas, como móviles */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem; /* Ajustar el tamaño de la fuente del título */
+  }
+
+  .hero-content p {
+    font-size: 1.2rem; /* Ajustar el tamaño de la fuente del párrafo */
+    margin-bottom: 20px;
+  }
+
+  .cta-buttons .btn-primary {
+    padding: 12px 20px; /* Reducir el padding de los botones */
+  }
+}
+
+/* Para pantallas muy pequeñas, como móviles en modo vertical */
+@media (max-width: 400px) {
+  .hero-section {
+    height: auto; /* Ajusta la altura automáticamente para móviles */
+    padding: 20px; /* Añade algo de padding */
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem; /* Reducir aún más el tamaño de la fuente */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .cta-buttons .btn-primary {
+    padding: 10px 15px; /* Ajustar el tamaño de los botones */
+    font-size: 1rem;
+  }
+}
+
+/* Para pantallas medianas, como tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .cta-buttons .btn-primary {
+    padding: 14px 25px;
+  }
+}
+
+/* Para pantallas grandes, como ordenadores */
+@media (min-width: 1025px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons .btn-primary {
+    padding: 15px 30px;
+  }
+}

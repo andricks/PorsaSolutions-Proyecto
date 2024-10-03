@@ -1,0 +1,142 @@
+/* Estilos generales del footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  width: 100vw;
+  margin: 0; /* Eliminar el margen negativo */
+  box-sizing: border-box; /* Asegurar que el padding no afecte al ancho total */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #007bff;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links li {
+  list-style: none;
+}
+
+.social-links li a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas, como móviles */
+@media (max-width: 400px) {
+  .footer-content {
+    flex-direction: column; /* Coloca las columnas en una sola columna */
+    align-items: center; /* Centra las columnas en móviles */
+  }
+
+  .footer-column {
+    margin: 20px 0; /* Añade espacio entre las columnas en móviles */
+    text-align: center; /* Centra el texto en las columnas */
+  }
+
+  .footer-section h4 {
+    font-size: 1.1rem; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .social-links {
+    justify-content: center; /* Centra los iconos de redes sociales */
+  }
+
+  .social-links li a {
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos en móviles */
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem; /* Ajusta el tamaño de la fuente en la parte inferior */
+    margin-top: 10px; /* Reduce el espacio superior en móviles */
+  }
+}
+
+/* Para pantallas medianas, como tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-content {
+    flex-direction: row; /* Mantiene las columnas en fila */
+  }
+
+  .footer-column {
+    margin: 15px; /* Ajusta el margen entre las columnas */
+  }
+
+  .footer-section h4 {
+    font-size: 1.1rem; /* Reduce ligeramente el tamaño de la fuente para pantallas medianas */
+  }
+
+  .social-links {
+    gap: 20px; /* Ajusta el espacio entre los iconos de redes sociales */
+  }
+
+  .social-links li a {
+    font-size: 1.4rem; /* Ajusta el tamaño de los iconos para pantallas medianas */
+  }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1025px) {
+  .footer-content {
+    flex-direction: row; /* Mantiene las columnas en fila */
+  }
+
+  .footer-column {
+    margin: 10px; /* Mantiene el margen entre las columnas */
+  }
+
+  .footer-section h4 {
+    font-size: 1.2rem; /* Mantiene el tamaño de la fuente para pantallas grandes */
+  }
+
+  .social-links {
+    gap: 15px; /* Mantiene el espacio entre los iconos de redes sociales */
+  }
+
+  .social-links li a {
+    font-size: 1.5rem; /* Mantiene el tamaño de los iconos en pantallas grandes */
+  }
+}

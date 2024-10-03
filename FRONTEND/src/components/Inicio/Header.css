@@ -1,0 +1,137 @@
+/* Estilos generales */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  width: 100vw;
+  margin: 0;
+  
+}
+
+
+  .navbar-logo {
+    width: 800px;  /* Ajusta el tamaño del logo */
+    height: auto; /* Mantén la proporción */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+   vertical-align: middle;/* Alinea verticalmente con el texto */
+    opacity: 0.7;  /* Aplica una transparencia del 70% */
+}
+/* Alinea verticalmente con el texto */
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-brand a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.btn-primary {
+  background-color: #f9a508;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #be8720;
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas, como móviles */
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column; /* Coloca los elementos en columna */
+    padding: 0 10px;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Los enlaces de navegación se apilan en columna */
+    gap: 10px;
+    margin-top: 10px; /* Añade espacio entre los enlaces y el logo */
+  }
+
+  .nav-buttons {
+    margin-top: 10px; /* Añade espacio entre los botones y el menú de navegación */
+  }
+
+  .btn-primary {
+    padding: 8px 15px; /* Ajusta el tamaño del botón para pantallas pequeñas */
+    font-size: 0.9rem; /* Reduce ligeramente el tamaño de la fuente */
+  }
+
+  .navbar-brand a {
+    font-size: 1.3em; /* Ajuste para que el logo no sea demasiado grande */
+  }
+}
+
+/* Para pantallas medianas, como tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 15px; /* Reduce ligeramente el padding para pantallas medianas */
+  }
+
+  .nav-links {
+    gap: 12px; /* Reduce el espacio entre los enlaces */
+  }
+
+  .navbar-brand a {
+    font-size: 1.4em; /* Ajusta el tamaño del logo */
+  }
+
+  .btn-primary {
+    padding: 9px 18px; /* Ajusta el tamaño del botón */
+  }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 0 30px; /* Más padding para pantallas grandes */
+  }
+
+  .nav-links {
+    gap: 20px; /* Aumenta el espacio entre los enlaces */
+  }
+
+  .navbar-brand a {
+    font-size: 1.5em; /* Mantiene el tamaño adecuado del logo */
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+  }
+}
