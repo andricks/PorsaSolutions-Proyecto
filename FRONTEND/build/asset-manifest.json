@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.33ba3df0.css",
+    "main.js": "/static/js/main.9643e7cd.js",
+    "static/js/453.15322daf.chunk.js": "/static/js/453.15322daf.chunk.js",
+    "static/media/bateria.jpg": "/static/media/bateria.adaa35b017709b5fa044.jpg",
+    "static/media/frenos.jpg": "/static/media/frenos.a1e431d93557997d27b0.jpg",
+    "static/media/motul.jpg": "/static/media/motul.b04c3440a43c691a0d3e.jpg",
+    "static/media/Castrol.jpg": "/static/media/Castrol.c3f2db5759456eae4b2d.jpg",
+    "static/media/aaa.jpg": "/static/media/aaa.496c61a31e0a99f5e9c9.jpg",
+    "static/media/alineacion-llantas-imagen-articulo.jpg": "/static/media/alineacion-llantas-imagen-articulo.c9915f13336ab37d7a22.jpg",
+    "static/media/valvule.jpg": "/static/media/valvule.3def8b55a34592296955.jpg",
+    "static/media/autologin.jpg": "/static/media/autologin.75988ff2e69e1e4d08dd.jpg",
+    "static/media/acitefiltro.jpeg": "/static/media/acitefiltro.db1b26a4dc314684c18d.jpeg",
+    "index.html": "/index.html",
+    "main.33ba3df0.css.map": "/static/css/main.33ba3df0.css.map",
+    "main.9643e7cd.js.map": "/static/js/main.9643e7cd.js.map",
+    "453.15322daf.chunk.js.map": "/static/js/453.15322daf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33ba3df0.css",
+    "static/js/main.9643e7cd.js"
+  ]
+}
