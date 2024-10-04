@@ -21,10 +21,9 @@ export default function ServicioPreventivo() {
   const handlePlacaChange = (event) => {
     setPlaca(event.target.value);
   };
-
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/formulario/${placa}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/formulario/${placa}`);
       setFormularioData(response.data.formularioData);
       setError('');
     } catch (error) {
@@ -32,16 +31,16 @@ export default function ServicioPreventivo() {
       setFormularioData(null);
     }
   };
-
+  
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/formulario/${placa}`, formularioData);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/formulario/${placa}`, formularioData);
       console.log(response.data.message);
     } catch (error) {
       setError('Error al actualizar el formulario');
     }
   };
-
+  
   const handleValueChange = (campo, nuevoValor) => {
     setFormularioData((prevData) => ({
       ...prevData,

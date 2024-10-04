@@ -25,7 +25,7 @@ export default function BuscarFormulario() {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/formulario/${placa}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/formulario/${placa}`);
       setFormularioData(response.data.formularioData);
       setError('');
       setShowDeleteButton(true);
@@ -35,10 +35,10 @@ export default function BuscarFormulario() {
       setShowDeleteButton(false);
     }
   };
-
+  
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:5000/formulario/${placa}`);
+      const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/formulario/${placa}`);
       setFormularioData(response.data.formularioData);
       setError('');
       setShowDeleteButton(true);
@@ -48,16 +48,17 @@ export default function BuscarFormulario() {
       setShowDeleteButton(false);
     }
   };
-
+  
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/formulario/${placa}`, formularioData);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/formulario/${placa}`, formularioData);
       console.log(response.data.message);
       setFormularioData(null); // Limpiar los datos después de la actualización
     } catch (error) {
       setError('Error al actualizar el formulario');
     }
   };
+  
 
   const handleValueChange = (campo, nuevoValor) => {
     setFormularioData((prevData) => ({

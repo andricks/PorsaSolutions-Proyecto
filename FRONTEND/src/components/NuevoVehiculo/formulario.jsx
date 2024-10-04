@@ -112,18 +112,18 @@ function Formulario() {
     });
   };
 
-  // Función para manejar el envío de datos al backend
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/formulario', formData);
-      console.log(response.data);
-      // Aquí puedes manejar la respuesta del backend si es necesario
-    } catch (error) {
-      console.error('Error al enviar los datos:', error);
-      // Aquí puedes manejar el error si es necesario
-    }
-  };
+// Función para manejar el envío de datos al backend
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  try {
+    const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/formulario`, formData);
+    console.log(response.data);
+    // Aquí puedes manejar la respuesta del backend si es necesario
+  } catch (error) {
+    console.error('Error al enviar los datos:', error);
+    // Aquí puedes manejar el error si es necesario
+  }
+};
 
   return (
     <Box sx={{ display: 'flex' }}>

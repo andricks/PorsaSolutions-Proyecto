@@ -30,7 +30,7 @@ export default function BuscarFormulario() {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/formularioCompleto/${placa}`);
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/formularioCompleto/${placa}`);
       setFormularioData(response.data.formularioData);
       setVehiculoData(response.data.vehiculo);
       setClienteData(response.data.cliente);
@@ -42,7 +42,7 @@ export default function BuscarFormulario() {
       setClienteData(null);
     }
   };
-
+  
   return (
     <Box sx={{ display: 'flex' }}>
       <Box component="main" sx={{ flexGrow: 1, p: 3, marginTop: '55px' }}>

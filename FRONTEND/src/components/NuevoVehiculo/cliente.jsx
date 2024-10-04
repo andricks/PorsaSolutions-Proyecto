@@ -14,32 +14,32 @@ function Cliente() {
 
   const fetchClientes = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/clientes');
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/clientes`);
       console.log(response, 'response');
-
+  
       // Extraer los datos de cliente del objeto de respuesta
       const data = response.data;
       const clientesArray = Object.keys(data).map(key => ({ id: key, ...data[key] }));
-
+  
       setClientes(clientesArray);
     } catch (error) {
       console.error('Error al obtener clientes:', error);
     }
   };
-
+  
   const handleEdit = (cliente) => {
     setEditingClient(cliente);
     setOpenDialog(true);
   };
-
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEditingClient({ ...editingClient, [name]: value });
   };
-
+  
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/clientes/${editingClient.id}`, editingClient);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/clientes/${editingClient.id}`, editingClient);
       console.log(response.data);
       setOpenDialog(false);
       fetchClientes();
@@ -47,16 +47,17 @@ function Cliente() {
       console.error('Error al actualizar el cliente:', error);
     }
   };
-
+  
   const handleDeleteCliente = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/clientes/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/clientes/${id}`);
       // Eliminar el cliente de la lista de clientes en el frontend
       setClientes(clientes.filter(cliente => cliente.id !== id));
     } catch (error) {
       console.error('Error al eliminar cliente:', error);
     }
   };
+  
 
   return (
     <Box sx={{ padding: '70px' }}>

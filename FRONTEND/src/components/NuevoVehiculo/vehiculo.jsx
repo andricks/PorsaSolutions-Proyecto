@@ -13,7 +13,7 @@ function Vehiculo() {
 
   const fetchVehiculos = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/vehicles');
+      const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/vehicles`);
       const data = response.data;
       const vehiculosArray = Object.keys(data).map(key => ({ id: key, ...data[key] }));
       setVehiculos(vehiculosArray);
@@ -21,20 +21,20 @@ function Vehiculo() {
       console.error('Error al obtener vehículos:', error);
     }
   };
-
+  
   const handleEdit = (vehiculo) => {
     setEditingVehiculo(vehiculo);
     setOpenDialog(true);
   };
-
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setEditingVehiculo({ ...editingVehiculo, [name]: value });
   };
-
+  
   const handleUpdate = async () => {
     try {
-      const response = await axios.put(`http://localhost:5000/vehicles/${editingVehiculo.id}`, editingVehiculo);
+      const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/vehicles/${editingVehiculo.id}`, editingVehiculo);
       console.log(response.data);
       setOpenDialog(false);
       fetchVehiculos();
@@ -42,16 +42,17 @@ function Vehiculo() {
       console.error('Error al actualizar el vehículo:', error);
     }
   };
-
+  
   const handleDeleteVehiculo = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/vehicles/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/vehicles/${id}`);
       // Eliminar el vehículo de la lista de vehículos en el frontend
       setVehiculos(vehiculos.filter(vehiculo => vehiculo.id !== id));
     } catch (error) {
       console.error('Error al eliminar vehículo:', error);
     }
   };
+  
 
   return (
     <Box sx={{ padding: '70px' }}>
