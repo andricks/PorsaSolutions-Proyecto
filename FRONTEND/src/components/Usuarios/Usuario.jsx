@@ -15,9 +15,6 @@ import Paper from '@mui/material/Paper';
 
 
 export default function BuscarFormulario() {
-
-
-
   const [placa, setPlaca] = useState('');
   const [formularioData, setFormularioData] = useState(null);
   const [vehiculoData, setVehiculoData] = useState(null);
